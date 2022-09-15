@@ -1,0 +1,4 @@
+#project exclude paths
+/node_modules/
+/server/node_modules
+/server/build
