@@ -1,5 +1,8 @@
 import './styles/main.css';
 
+// icones importado phosphor react
+import { MagnifyingGlassPlus } from "phosphor-react";
+
 // importar imagem por dentro do Js
 import logoImagem from './assets/logo-nlw-esports.svg'
 
@@ -64,8 +67,17 @@ function App() {
           </a>
         </div>
 
-        <div className=''>
-
+        <div className='pt-1 mt-8 bg-nlw-gradient self-stretch rounded-lg overflow-hidden'>
+          <div className='bg-[#2A2634] px-8 py-6 flex justify-between items-center'>
+            <div>
+              <strong className='block text-2xl text-white font-black'>Não encontrou seu Duo?</strong>
+              <span className='block text-zinc-400'>Publique um anúncio para encontrar novos players!</span>
+            </div>
+            <button className='px-4 py-3 text-white bg-violet-500 rounded hover:bg-violet-700 flex items-center gap-3'>
+              <MagnifyingGlassPlus size={24}/>
+              Publicar Anúncio
+            </button>
+          </div>
         </div>
       </div>
     )

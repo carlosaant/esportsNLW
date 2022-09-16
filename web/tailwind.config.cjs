@@ -11,6 +11,10 @@ module.exports = {
     // setar a imagem de fundo diretamente
     // criar propriedades
     extend: {
+      // alterar as fontes padrao
+      fontFamily: {
+        sans: ['Inter', 'sans-serif']
+      },
       backgroundImage: {
         //enviar para pasta Public, para poder ser acessado publicamente pelo endereço
         backgroundGalaxy: "url('/background-galaxy.png')",
