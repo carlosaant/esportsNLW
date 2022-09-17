@@ -6,7 +6,7 @@ import { ImageBackground } from 'react-native';
 import { styles } from './styles';
 
 // definir a tipagem do arquivo png em src/@types
-import backgroundImg from "../../assets/background-galaxy";
+import backgroundImg from "../../assets/background-galaxy.png";
 // ---------------------
 
 interface Props{
