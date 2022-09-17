@@ -14,10 +14,12 @@ interface Props{
 }
 
 // children vai ser tudo que estiver inserido dentro do componente (que vai ser utilizado, Ex: app.tsx tudo oque estiver dento das tags de background)
+//defaultsource carrega mais rapido a imagem, ja que por padrao vai ser carregada primeira, evita uma espera ficar esperando aparecer o fundo
 export function Background({children}: Props) {
   return (
     <ImageBackground  
     source={backgroundImg}
+    defaultSource={backgroundImg}
     style={styles.container}
     >
         {children}
