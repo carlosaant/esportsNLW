@@ -27,8 +27,7 @@ export function Home() {
         //     name: 'League of Legends',
         //     ads: '4 anúncios',
         //   }
-          data={GAMES[0]}
-        
+          data={GAMES[0]}   
       />
 
     </View>

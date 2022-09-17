@@ -1,4 +1,6 @@
-import { TouchableOpacity, TouchableOpacityProps, ImageBackground, ImageSourcePropType } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+import { TouchableOpacity, TouchableOpacityProps, ImageBackground, ImageSourcePropType, Text } from 'react-native';
+import { THEME } from '../../theme';
 // touchableOpacity - regiao clicavel como um todo
 // TouchableOpacityProps - tipagem para touchableopacity, para utilizar nos elementos
 
@@ -24,8 +26,22 @@ export function GameCard({data, ...rest}: Props) {
       <ImageBackground 
         style={styles.cover}
         source={data.cover}
-      />
+      >
 
+      
+        <LinearGradient
+          colors={THEME.COLORS.FOOTER}
+          style={styles.footer}
+        >
+          <Text style={styles.name}>
+              {data.name}
+          </Text>
+          <Text style={styles.ads}>
+              {data.ads}
+          </Text>
+
+        </LinearGradient>
+      </ImageBackground>
     </TouchableOpacity>
   );
 }
