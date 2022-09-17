@@ -4,7 +4,10 @@ import {StatusBar} from 'react-native';
 import {useFonts, Inter_400Regular, Inter_600SemiBold, Inter_700Bold, Inter_900Black} from '@expo-google-fonts/inter';
 // importando a fonts a serem utilizada que foram instaladas
 
+// imports paginas e elementos
 import { Background } from './src/components/Background';
+import { Home } from './src/screens/Home';
+import { Loading } from './src/components/Loading';
 
 
 // ---------------------------------
@@ -28,7 +31,8 @@ export default function App() {
       />
         {
           // garantir que as fonts foram carregadas, antes da execução
-          fontsLoaded ? 
+          // se forem carregadas, exibe a Home, senão entra em tela de loading
+          fontsLoaded ? <Home /> : <Loading />
         }
       
     </Background>
