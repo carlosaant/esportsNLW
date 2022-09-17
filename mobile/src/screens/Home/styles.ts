@@ -11,7 +11,8 @@ export const styles = StyleSheet.create({
     marginTop: 74,
     marginBottom: 48
   },
-  footer: {
-    
+  contentList: {
+    paddingLeft: 32,
+    paddingRight: 64
   }
 });
