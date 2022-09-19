@@ -1,6 +1,8 @@
 import express, { request, response } from 'express';
+import { PrismaClient } from '@prisma/client';
 
 const app = express();
+const prisma = new PrismaClient();
 
 // localhost: 3333
 //www.minhaapi.com/ads
@@ -29,8 +31,20 @@ const app = express();
  */
 // --------------------
 
-app.get('/games', (request, response)=>{
-  return response.json([]);
+app.get('/games', async(request, response)=>{
+  const games = await prisma.game.findMany({
+    // caso tenha anuncio para o game 
+    // procurando todos os games, incluindo (join), com um count com o relacionamento com ads
+    include: {
+      _count:{
+        select:{
+          ads:true
+        }
+      }
+    }
+  });
+
+  return response.json(games);
 });
 
 // criar - 
