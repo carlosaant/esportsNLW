@@ -6,9 +6,9 @@
 
 - Um para muitos, um game pode ter muitos anúncios.
 
-> id
-> title
-> bannerUrl
+> - id
+> - title
+> - bannerUrl
 
 _Caso seja por upload, utilizar CDN (Content Delivery Network) ex: Amazon S3, etc => Url_
 
